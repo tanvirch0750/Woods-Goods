@@ -1,22 +1,23 @@
-import About from './AboutPage'
-import AuthWrapper from './AuthWrapper'
-import Cart from './CartPage'
-import Checkout from './CheckoutPage'
-import Error from './ErrorPage'
-import Home from './HomePage'
-import PrivateRoute from './PrivateRoute'
-import Products from './ProductsPage'
-import SingleProduct from './SingleProductPage'
+/* eslint-disable prettier/prettier */
+import AboutPage from './about-page/AboutPage';
+import AuthWrapper from './auth-wrapper/AuthWrapper';
+import CartPage from './cart-page/CartPage';
+import CheckoutPage from './checkout-page/CheckoutPage';
+import ErrorPage from './error-page/ErrorPage';
+import HomePage from './home-page/HomePage';
+import PrivateRoute from './private-route/PrivateRoute';
+import ProductPage from './product-page/ProductPage';
+import SingleProductPage from './single-product-page/SingleProductPage';
 
 export {
-   Home,
-   Products,
-   SingleProduct,
-   About,
-   Cart,
-   Error,
-   Checkout,
+   HomePage,
+   ProductPage,
+   SingleProductPage,
+   AboutPage,
+   CartPage,
+   ErrorPage,
+   CheckoutPage,
    PrivateRoute,
    AuthWrapper,
-}
+};
 

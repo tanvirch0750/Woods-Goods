@@ -23,7 +23,7 @@ const NavContainer = styled.nav`
     .nav-toggle {
         background: transparent;
         border: transparent;
-        color: var(--clr-primary-1);
+        color: var(--clr-primary-5);
         cursor: pointer;
         svg {
             font-size: 2rem;
@@ -53,11 +53,12 @@ const NavContainer = styled.nav`
             a {
                 color: var(--clr-grey-3);
                 font-size: 1rem;
+                font-weight: 500;
                 text-transform: capitalize;
                 letter-spacing: var(--spacing);
                 padding: 0.5rem;
                 &:hover {
-                    border-bottom: 2px solid var(--clr-primary-4);
+                    border-bottom: 3px solid var(--clr-primary-7);
                 }
             }
         }

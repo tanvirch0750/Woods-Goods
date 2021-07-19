@@ -3,6 +3,7 @@ import { FaBars } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.svg';
 import { links } from '../../utils/constants';
+import { CartButton } from '../index';
 import NavContainer from './Navbar.styles';
 
 function Navbar() {
@@ -27,6 +28,7 @@ function Navbar() {
                         );
                     })}
                 </ul>
+                <CartButton />
             </div>
         </NavContainer>
     );

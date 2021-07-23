@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const SidebarContainer = styled.div`
+const MobileNavContainer = styled.div`
     text-align: center;
     .sidebar-header {
         display: flex;
@@ -71,4 +71,4 @@ const SidebarContainer = styled.div`
     }
 `;
 
-export default SidebarContainer;
+export default MobileNavContainer;

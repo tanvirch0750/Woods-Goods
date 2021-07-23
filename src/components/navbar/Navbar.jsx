@@ -2,11 +2,14 @@ import React from 'react';
 import { FaBars } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.svg';
+import { useGlobalContext } from '../../context/globalContext';
 import { links } from '../../utils/constants';
-import { CartButton } from '../index';
+import { CartAndLoginButton } from '../index';
 import NavContainer from './Navbar.styles';
 
 function Navbar() {
+    const { openMobileMenu } = useGlobalContext();
+
     return (
         <NavContainer>
             <div className="nav-center">
@@ -14,7 +17,7 @@ function Navbar() {
                     <Link to="/">
                         <img src={logo} alt="Woods and Goods" />
                     </Link>
-                    <button type="button" className="nav-toggle">
+                    <button type="button" className="nav-toggle" onClick={openMobileMenu}>
                         <FaBars />
                     </button>
                 </div>
@@ -28,7 +31,7 @@ function Navbar() {
                         );
                     })}
                 </ul>
-                <CartButton />
+                <CartAndLoginButton />
             </div>
         </NavContainer>
     );

@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Footer, Navbar, Sidebar } from './components';
+import { Footer, MobileNavbar, Navbar } from './components';
 import {
     AboutPage,
     CartPage,
@@ -15,7 +15,7 @@ function App() {
     return (
         <Router>
             <Navbar />
-            <Sidebar />
+            <MobileNavbar />
             <Switch>
                 <Route exact path="/">
                     <HomePage />

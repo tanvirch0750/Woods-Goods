@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import AddToCart from './add-to-cart/AddToCart';
-import CartButton from './cart-button/CartButton';
+import CartAndLoginButton from './cart-and-login-button/CartAndLoginButton';
 import CartContent from './cart-content/CartContent';
 import Contact from './contact/Contact';
 import Error from './error/Error';
@@ -9,12 +9,12 @@ import Filter from './filter/Filter';
 import Footer from './footer/Footer';
 import Hero from './hero/Hero';
 import Loading from './loading/Loading';
+import MobileNavbar from './mobile-navbar/mobileNav';
 import Navbar from './navbar/Navbar';
 import PageHero from './page-hero/PageHero';
 import ProductImages from './product-images/ProductImages';
 import ProductList from './product-list/ProductList';
 import Services from './services/Services';
-import Sidebar from './sidebar/Sidebar';
 import Sort from './sort/Sort';
 import Stars from './stars/Stars';
 import StripeCheckout from './stripe-checkout/StripeCheckout';
@@ -22,9 +22,8 @@ import StripeCheckout from './stripe-checkout/StripeCheckout';
 export {
    FeaturedProduct,
    Navbar,
-   CartButton,
    Footer,
-   Sidebar,
+   MobileNavbar,
    Hero,
    Services,
    Contact,
@@ -39,5 +38,6 @@ export {
    CartContent,
    PageHero,
    StripeCheckout,
+   CartAndLoginButton
 };
 

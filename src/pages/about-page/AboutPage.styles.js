@@ -15,7 +15,7 @@ const Wrapper = styled.section`
         max-width: 45em;
         margin: 0 auto;
         margin-top: 2rem;
-        color: var(--clr-grey-5);
+        color: var(--clr-grey-3);
     }
     .title {
         text-align: left;

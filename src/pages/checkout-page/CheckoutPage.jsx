@@ -1,7 +1,14 @@
 import React from 'react';
+import { Hero } from '../../components';
+import Wrapper from './CheckoutPage.styles';
 
 function CheckoutPage() {
-    return <div>Checckout page</div>;
+    return (
+        <main>
+            <Hero title="checkout" />
+            <Wrapper className="page" />
+        </main>
+    );
 }
 
 export default CheckoutPage;

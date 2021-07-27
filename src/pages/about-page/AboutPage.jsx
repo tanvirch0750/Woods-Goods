@@ -1,12 +1,12 @@
 import React from 'react';
 import aboutImg from '../../assets/hero-bcg.jpeg';
-import { Hero } from '../../components';
+import { PageHero } from '../../components';
 import Wrapper from './AboutPage.styles';
 
 function AboutPage() {
     return (
         <main>
-            <Hero title="about" />
+            <PageHero title="about" />
             <Wrapper className="page section section-center">
                 <img src={aboutImg} alt="nice desk" />
                 <article>

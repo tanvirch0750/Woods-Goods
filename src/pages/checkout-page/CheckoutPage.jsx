@@ -1,11 +1,11 @@
 import React from 'react';
-import { Hero } from '../../components';
+import { PageHero } from '../../components';
 import Wrapper from './CheckoutPage.styles';
 
 function CheckoutPage() {
     return (
         <main>
-            <Hero title="checkout" />
+            <PageHero title="checkout" />
             <Wrapper className="page" />
         </main>
     );

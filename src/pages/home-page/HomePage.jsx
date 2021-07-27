@@ -1,7 +1,15 @@
 import React from 'react';
+import { Contact, FeaturedProduct, Hero, Services } from '../../components';
 
 function HomePage() {
-    return <div>Home page</div>;
+    return (
+        <main>
+            <Hero />
+            <FeaturedProduct />
+            <Services />
+            <Contact />
+        </main>
+    );
 }
 
 export default HomePage;

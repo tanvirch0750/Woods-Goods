@@ -7,15 +7,16 @@ const Wrapper = styled.section`
     }
     padding: 5rem 0;
 
-    background: var(--clr-primary-10);
+    background: var(--clr-primary-9);
 
     .header h3 {
         margin-bottom: 2rem;
+        text-transform: none;
     }
     p {
         margin-bottom: 0;
-        line-height: 1.8;
-        color: var(--clr-primary-3);
+        line-height: 1.5;
+        color: var(--clr-primary-1);
     }
     .services-center {
         margin-top: 4rem;
@@ -23,12 +24,13 @@ const Wrapper = styled.section`
         gap: 2.5rem;
     }
     .service {
-        background: var(--clr-primary-7);
+        background: #fff;
         text-align: center;
         padding: 2.5rem 2rem;
         border-radius: var(--radius);
+        box-shadow: var(--light-shadow);
         p {
-            color: var(--clr-primary-2);
+            color: var(--clr-primary-1);
         }
     }
     span {

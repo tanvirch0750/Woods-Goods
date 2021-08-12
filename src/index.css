@@ -6,30 +6,30 @@ Variables
 
 :root {
   /* dark shades of primary color*/
-  --clr-primary-1: hsl(140, 49%, 55%);
-  --clr-primary-2: hsl(140, 49%, 63%);
-  --clr-primary-3: hsl(140, 49%, 71%);
-  --clr-primary-4: hsl(140, 49%, 79%);
+  --clr-primary-1: #37b24d;
+  --clr-primary-2: #40c057;
+  --clr-primary-3: #51cf66;
+  --clr-primary-4: #69db7c;
 
   /* primary/main color */
-  --clr-primary-5: hsl(111, 55%, 64%);
+  --clr-primary-5: #2f9e44;
   /* lighter shades of primary color */
-  --clr-primary-6: hsl(111, 55%, 70%);
-  --clr-primary-7: hsl(111, 55%, 77%);
-  --clr-primary-8: hsl(111, 55%, 83%);
-  --clr-primary-9: hsl(111, 55%, 90%);
+  --clr-primary-6: #8ce99a;
+  --clr-primary-7: #b2f2bb;
+  --clr-primary-8: #d3f9d8;
+  --clr-primary-9: #ebfbee;
   --clr-primary-10: hsl(111, 55%, 97%);
   /* darkest grey - used for headings */
-  --clr-grey-1: hsl(209, 61%, 16%);
-  --clr-grey-2: hsl(211, 39%, 23%);
-  --clr-grey-3: hsl(209, 34%, 30%);
-  --clr-grey-4: hsl(209, 28%, 39%);
+  --clr-grey-1: #343a40;
+  --clr-grey-2: #495057;
+  --clr-grey-3: #868e96;
+  --clr-grey-4: #adb5bd;
   /* grey used for paragraphs */
-  --clr-grey-5: hsl(210, 22%, 49%);
-  --clr-grey-6: hsl(209, 23%, 60%);
-  --clr-grey-7: hsl(211, 27%, 70%);
-  --clr-grey-8: hsl(210, 31%, 80%);
-  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-5: #ced4da;
+  --clr-grey-6: #dee2e6;
+  --clr-grey-7: #e9ecef;
+  --clr-grey-8: #f1f3f5;
+  --clr-grey-9: #f8f9fa;
   --clr-grey-10: hsl(210, 36%, 96%);
   --clr-white: #fff;
   --clr-red-dark: hsl(360, 67%, 44%);
@@ -52,6 +52,8 @@ Global Styles
 ===============
 */
 
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
 *,
 ::after,
 ::before {
@@ -60,7 +62,7 @@ Global Styles
   box-sizing: border-box;
 }
 body {
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: "Inter", sans-serif;
   background: var(--clr-white);
   color: var(--clr-grey-1);
   line-height: 1.5;
@@ -185,7 +187,7 @@ p {
 }
 .btn:hover {
   color: var(--clr-primary-10);
-  background: var(--clr-primary-6);
+  background: var(--clr-primary-1);
 }
 .title {
   text-align: center;

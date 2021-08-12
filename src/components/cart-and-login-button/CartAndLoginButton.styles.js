@@ -7,10 +7,10 @@ const Wrapper = styled.div`
     width: 225px;
 
     .cart-btn {
+        font-family: "Inter", sans-serif;
         color: var(--clr-grey-1);
-        font-size: 1.5rem;
-        letter-spacing: var(--spacing);
-        color: var(--clr-grey-1);
+        font-size: 1.1rem;
+        font-weight: 500;
         display: flex;
 
         align-items: center;
@@ -40,14 +40,15 @@ const Wrapper = styled.div`
         padding: 12px;
     }
     .auth-btn {
+        font-family: "Inter", sans-serif;
+        color: var(--clr-grey-1);
+        font-size: 1.1rem;
+        font-weight: 500;
         display: flex;
         align-items: center;
         background: transparent;
         border-color: transparent;
-        font-size: 1.5rem;
         cursor: pointer;
-        color: var(--clr-grey-1);
-        letter-spacing: var(--spacing);
         svg {
             margin-left: 5px;
         }

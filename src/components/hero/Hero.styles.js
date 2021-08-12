@@ -18,7 +18,7 @@ const Wrapper = styled.section`
     line-height: 1.5;
     max-width: 45em;
     margin-bottom: 2rem;
-    color: var(--clr-grey-4);
+    color: var(--clr-grey-3);
     font-size: 1rem;
   }
   @media (min-width: 992px) {
@@ -38,10 +38,11 @@ const Wrapper = styled.section`
     .img-container {
       display: block;
       position: relative;
+      justify-self: end;
     }
     .main-img {
       width: 100%;
-      height: 450px;
+      height: 500px;
       position: relative;
       border-radius: var(--radius);
       display: block;

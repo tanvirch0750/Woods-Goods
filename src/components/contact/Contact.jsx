@@ -11,8 +11,17 @@ function Contact() {
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae impedit
                         corporis est reiciendis tenetur a culpa suscipit repellat minus at.
                     </p>
-                    <form className="contact-form">
-                        <input type="email" className="form-input" placeholder="Enter your email" />
+                    <form
+                        className="contact-form"
+                        action="https://formspree.io/f/xeqvpqpe"
+                        method="POST"
+                    >
+                        <input
+                            type="email"
+                            className="form-input"
+                            placeholder="Enter your email"
+                            name="_replyto"
+                        />
                         <button type="submit" className="submit-btn">
                             Subscribe
                         </button>

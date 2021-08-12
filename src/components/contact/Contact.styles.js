@@ -9,7 +9,7 @@ const Wrapper = styled.section`
     p {
         line-height: 1.5;
         max-width: 45em;
-        color: var(--clr-grey-5);
+        color: var(--clr-grey-3);
     }
     .contact-form {
         width: 90vw;
@@ -47,7 +47,7 @@ const Wrapper = styled.section`
         letter-spacing: var(--spacing);
         cursor: pointer;
         transition: var(--transition);
-        color: var(--clr-black);
+        color: var(--clr-white);
     }
     .submit-btn:focus{
         outline: none;

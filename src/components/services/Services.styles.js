@@ -3,20 +3,21 @@ import styled from 'styled-components';
 const Wrapper = styled.section`
     h3,
     h4 {
-        color: var(--clr-primary-1);
+        color: var(--clr-primary-5);
     }
     padding: 5rem 0;
 
-    background: var(--clr-primary-9);
+    background: var(--clr-primary-10);
 
     .header h3 {
-        margin-bottom: 2rem;
+        margin-bottom: 2.2rem;
         text-transform: none;
     }
+    
     p {
         margin-bottom: 0;
         line-height: 1.5;
-        color: var(--clr-primary-1);
+        color: var(--clr-primary-5);
     }
     .services-center {
         margin-top: 4rem;
@@ -30,7 +31,7 @@ const Wrapper = styled.section`
         border-radius: var(--radius);
         box-shadow: var(--light-shadow);
         p {
-            color: var(--clr-primary-1);
+            color: var(--clr-grey-3);
         }
     }
     span {
@@ -39,10 +40,10 @@ const Wrapper = styled.section`
         display: grid;
         margin: 0 auto;
         place-items: center;
-        margin-bottom: 1rem;
+        margin-bottom: 1.1rem;
         border-radius: 50%;
         background: var(--clr-primary-10);
-        color: var(--clr-primary-1);
+        color: var(--clr-primary-5);
         svg {
             font-size: 2rem;
         }

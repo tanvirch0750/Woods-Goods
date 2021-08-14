@@ -5,6 +5,7 @@ const NavContainer = styled.nav`
     display: flex;
     align-items: center;
     justify-content: center;
+    background: var(--clr-primary-10);
 
     .nav-center {
         width: 90vw;

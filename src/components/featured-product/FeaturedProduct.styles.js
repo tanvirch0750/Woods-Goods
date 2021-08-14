@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.section`
-    background: var(--clr-grey-10);
+    
     .featured {
         margin: 4rem auto;
         display: grid;

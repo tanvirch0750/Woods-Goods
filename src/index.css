@@ -135,6 +135,10 @@ p {
 }
 /*  global classes */
 
+.hero-full {
+  background: var(--clr-primary-10);
+}
+
 /* section */
 .section {
   padding: 5rem 0;

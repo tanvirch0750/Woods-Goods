@@ -63,7 +63,7 @@ const Wrapper = styled.section`
       position: absolute;
       width: 10%;
       height: 80%;
-      background: var(--clr-primary-9);
+      background: var(--clr-primary-8);
       bottom: 0%;
       left: -8%;
       border-radius: var(--radius);

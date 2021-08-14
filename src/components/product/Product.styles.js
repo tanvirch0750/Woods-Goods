@@ -48,7 +48,7 @@ const Wrapper = styled.article`
     footer h5,
     footer p {
         margin-bottom: 0;
-        font-weight: 400;
+        font-weight: 600;
     }
 
     footer p {

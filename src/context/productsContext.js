@@ -1,30 +1,46 @@
-// // import axios from 'axios';
-// import React, { useContext, useReducer } from 'react';
-// import { MOBILE_MENU_CLOSE, MOBILE_MENU_OPEN } from '../actions';
-// import reducer from '../reducers/productReducer';
+// import axios from 'axios';
+import axios from 'axios';
+import React, { useContext, useEffect, useReducer } from 'react';
+import { GET_PRODUCTS_BEGIN, GET_PRODUCTS_ERROR, GET_PRODUCTS_SUCCESS } from '../actions';
+import reducer from '../reducers/productReducer';
+import { productsUrl } from "../utils/constants";
 
 
-// const initialState = {
-//    isMobileMenuOpen: false
-// };
+const initialState = {
+   productsLoading: false,
+   productsError: false,
+   products: [],
+   featuredProducts: []
+};
 
-// const ProductsContext = React.createContext();
+const ProductsContext = React.createContext();
 
-// export const ProductsProvider = ({ children }) => {
-//    const [state, dispatch] = useReducer(reducer, initialState);
+export const ProductsProvider = ({ children }) => {
+   const [state, dispatch] = useReducer(reducer, initialState);
 
-//    const openMobileMenu = () => {
-//       dispatch({type: MOBILE_MENU_OPEN})
-//    }
+   const fetchProducts = async ( url ) => {
+      dispatch({type: GET_PRODUCTS_BEGIN})
 
-//    const closeMobileMenu = () => {
-//       dispatch({type: MOBILE_MENU_CLOSE})
-//    }
+      try {
+         const response = await axios.get(url);
+         console.log(response)
+         const products = response.data;
+         console.log(products)
+         dispatch({type: GET_PRODUCTS_SUCCESS, payload: products})
+      } catch (error) {
+         dispatch({type: GET_PRODUCTS_ERROR})
+      }
+      
+   }
 
-//    return(
-//       <ProductsContext.Provider value={{...state, openMobileMenu, closeMobileMenu}}>
-//          {children}
-//       </ProductsContext.Provider>
-//    )}
+   useEffect(() => {
+     fetchProducts(productsUrl)
+   }, []);
 
-// export const useProductsContext = () => useContext(ProductsContext)
+   return(
+      <ProductsContext.Provider value={{...state}}>
+         {children}
+      </ProductsContext.Provider>
+   )}
+
+export const useProductsContext = () => useContext(ProductsContext)

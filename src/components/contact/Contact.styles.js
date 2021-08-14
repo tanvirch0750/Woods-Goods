@@ -22,7 +22,7 @@ const Wrapper = styled.section`
     .submit-btn {
         font-size: 1rem;
         padding: 0.5rem 1rem;
-        border: 2px solid var(--clr-primary-5);
+        border: 1px solid var(--clr-primary-5);
     }
     .form-input {
         border-right: none;

@@ -16,7 +16,7 @@ function Hero() {
                     error minus placeat. Aliquam natus odit delectus totam autem.
                 </p>
                 <Link to="/products" className="btn hero-btn">
-                    Shop Now
+                    Get your furniture
                 </Link>
             </article>
             <article className="img-container">

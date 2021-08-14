@@ -22,9 +22,21 @@ const MobileNavContainer = styled.div`
         color: var(--clr-red-light);
     }
     .logo {
-        justify-self: center;
-        height: 45px;
-    }
+            width: 250px;
+            margin-left: -15px;
+            font-family: 'Nunito', sans-serif;
+            color: var(--clr-primary-1);
+            font-size: 30px;
+            display: inline-block;
+            align-self: center;
+            font-weight: 700;
+            letter-spacing: -3px;
+            text-shadow: 2px 3px 4px rgba(0,0,0,0.15);
+
+            span {
+                color: var(--clr-grey-2);
+            }
+        }
     .links {
         margin-bottom: 2rem;
     }

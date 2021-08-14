@@ -1,7 +1,6 @@
 import React from 'react';
 import { FaTimes } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/logo.svg';
 import { useGlobalContext } from '../../context/globalContext';
 import { links } from '../../utils/constants';
 import { CartAndLoginButton } from '../index';
@@ -14,7 +13,9 @@ function MobileNavbar() {
         <MobileNavContainer>
             <aside className={`${isMobileMenuOpen ? 'sidebar show-sidebar' : 'sidebar'}`}>
                 <div className="sidebar-header">
-                    <img src={logo} alt="woods and goods" />
+                    <Link to="/" className="logo">
+                        Woods <span>&</span> Goods
+                    </Link>
                     <button className="close-btn" type="button" onClick={closeMobileMenu}>
                         <FaTimes />
                     </button>

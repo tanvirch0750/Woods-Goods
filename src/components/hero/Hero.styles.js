@@ -4,6 +4,7 @@ const Wrapper = styled.section`
   min-height: 60vh;
   display: grid;
   place-items: center;
+
   .img-container {
     display: none;
   }
@@ -32,8 +33,9 @@ const Wrapper = styled.section`
       font-size: 1.20rem;
     }
     .hero-btn {
-      padding: 0.75rem 1.5rem;
+      padding: 0.70rem 1rem;
       font-size: 1rem;
+      text-transform: capitalize;
     }
     .img-container {
       display: block;

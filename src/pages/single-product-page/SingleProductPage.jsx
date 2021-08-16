@@ -53,7 +53,7 @@ function SingleProductPage() {
                     See all the products
                 </Link>
                 <div className="product-center">
-                    <ProductImages />
+                    <ProductImages images={images}/>
                     <section className="content">
                         <h2>{name}</h2>
                         <Stars />

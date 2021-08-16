@@ -4,6 +4,7 @@ const Wrapper = styled.section`
     .main {
         height: 600px;
     }
+    
     img {
         width: 100%;
         display: block;
@@ -22,6 +23,7 @@ const Wrapper = styled.section`
     }
     .active {
         border: 2px solid var(--clr-primary-5);
+        opacity: 0.8;
     }
     @media (max-width: 576px) {
         .main {

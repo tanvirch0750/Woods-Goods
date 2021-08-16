@@ -1,10 +1,13 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.main`
+    .section {
+        padding: 2rem 0;
+    }
     .product-center {
         display: grid;
         gap: 4rem;
-        margin-top: 2rem;
+        margin-top: 5rem;
     }
     .price {
         color: var(--clr-primary-5);
@@ -26,7 +29,7 @@ const Wrapper = styled.main`
     @media (min-width: 992px) {
         .product-center {
             grid-template-columns: 1fr 1fr;
-            align-items: center;
+            align-items: start;
         }
         .price {
             font-size: 1.25rem;

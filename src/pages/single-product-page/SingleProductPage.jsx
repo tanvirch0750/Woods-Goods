@@ -47,11 +47,14 @@ function SingleProductPage() {
 
     return (
         <Wrapper>
-            <PageHero title={name} product/>
-            <div className="section section-center page">
-                <Link to="/products" className="btn">
+            <div className="bredcrumb-product section-center">
+               <PageHero title={name} product/>
+               <Link to="/products" className="btn">
                     See all the products
                 </Link>
+            </div>
+            
+            <div className="section section-center page">
                 <div className="product-center">
                     <ProductImages images={images}/>
                     <section className="content">
@@ -72,7 +75,7 @@ function SingleProductPage() {
                             {company}
                         </p>
                         <hr />
-                        {stock > 0 && <AddToCart />}
+                        {stock > 0 && <AddToCart product={product}/>}
                     </section>
                 </div>
             </div>

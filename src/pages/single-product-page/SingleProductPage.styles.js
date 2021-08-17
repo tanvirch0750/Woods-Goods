@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.main`
+    
     .section {
-        padding: 2rem 0;
+        padding: 0 0 4rem 0;
     }
     .product-center {
         display: grid;
@@ -23,10 +24,23 @@ const Wrapper = styled.main`
         grid-template-columns: 125px 1fr;
         span {
             font-weight: 700;
+            color: var(--clr-grey-2);
         }
     }
 
     @media (min-width: 992px) {
+        .bredcrumb-product{
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .section-center {
+                width: 500px;
+                margin: 0;
+                max-width: 500px;
+            }
+        }
         .product-center {
             grid-template-columns: 1fr 1fr;
             align-items: start;

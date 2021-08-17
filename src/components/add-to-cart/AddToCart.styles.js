@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const Wrapper = styled.section`
     margin-top: 2rem;
+    
     .colors {
         display: grid;
         grid-template-columns: 125px 1fr;
@@ -10,6 +11,7 @@ const Wrapper = styled.section`
         span {
             text-transform: capitalize;
             font-weight: 700;
+            color: var(--clr-grey-2);
         }
         div {
             display: flex;
@@ -43,6 +45,16 @@ const Wrapper = styled.section`
     .btn {
         margin-top: 1rem;
         width: 140px;
+    }
+
+    @media (min-width: 992px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .btn-container {
+        margin-top: 0rem;
+       }
     }
 `;
 

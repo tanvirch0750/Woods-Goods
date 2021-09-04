@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import { FilterProvider } from './context/filterContext';
 import { GlobalProvider } from './context/globalContext';
 import { ProductsProvider } from './context/productsContext';
 import './index.css';
@@ -9,7 +10,9 @@ ReactDOM.render(
     <React.StrictMode>
         <GlobalProvider>
             <ProductsProvider>
-              <App />
+               <FilterProvider>
+                  <App />
+               </FilterProvider>
            </ProductsProvider>
         </GlobalProvider>
     </React.StrictMode>,

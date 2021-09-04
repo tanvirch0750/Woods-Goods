@@ -6,7 +6,8 @@ import { useProductsContext } from './productsContext';
 
 const initialState = {
    filteredProducts: [],
-   allProducts: []
+   allProducts: [],
+   gridView: false
 };
 
 const FilterContext = React.createContext();

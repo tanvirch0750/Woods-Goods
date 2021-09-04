@@ -17,23 +17,26 @@ const Wrapper = styled.section`
         margin-bottom: 0.5rem;
     }
     .price {
-        color: var(--clr-primary-6);
+        color: var(--clr-primary-5);
         margin-bottom: 0.75rem;
+        font-weight: 700;
     }
     p {
         max-width: 45em;
         margin-bottom: 1rem;
+        font-size: 15px;
     }
     .btn {
-        font-size: 0.5rem;
-        padding: 0.25rem 0.5rem;
+        font-size: 0.8rem;
+        padding: 0.3rem 1.3rem;
+        text-transform: capitalize;
     }
     @media (min-width: 992px) {
         article {
             display: grid;
             grid-template-columns: auto 1fr;
             column-gap: 2rem;
-            align-items: center;
+            align-items: start;
         }
     }
 `;

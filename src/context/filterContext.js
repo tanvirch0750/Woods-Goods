@@ -8,7 +8,17 @@ const initialState = {
    filteredProducts: [],
    allProducts: [],
    gridView: true,
-   sort: 'price-lowest'
+   sort: 'price-lowest',
+   filters: {
+      text: '',
+      company: 'all',
+      category: 'all',
+      color: 'all',
+      minPrice: 0,
+      maxPrice: 0,
+      price: 0,
+      shipping: false
+   }
 };
 
 const FilterContext = React.createContext();

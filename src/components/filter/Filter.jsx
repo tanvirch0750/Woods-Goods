@@ -79,7 +79,7 @@ function Filter() {
                                             onClick={updateFilters}
                                             data-color="all"
                                             className={`${
-                                                color === 'all' ? 'all-btn-active' : 'all-btn'
+                                                color === 'all' ? 'all-btn active' : 'all-btn'
                                             }`}
                                         >
                                             all
@@ -93,7 +93,9 @@ function Filter() {
                                         key={index}
                                         name="color"
                                         style={{ background: col }}
-                                        className={`${color === col ? 'color-btn active' : null}`}
+                                        className={`${
+                                            color === col ? 'color-btn active' : 'color-btn'
+                                        }`}
                                         data-color={col}
                                         onClick={updateFilters}
                                     >

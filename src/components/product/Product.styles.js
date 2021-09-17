@@ -1,16 +1,21 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.article`
+    border: 1px solid #eee;
+    border-radius: 5px;
+    overflow: hidden;
+
     .container {
         position: relative;
         background: var(--clr-black);
-        border-radius: var(--radius);
+        /* border-radius: var(--radius); */
     }
     img {
         width: 100%;
         display: block;
         object-fit: cover;
-        border-radius: var(--radius);
+        /* border-radius: var(--radius); */
+        /* border-top-left-radius: var(--radius); */
         transition: var(--transition);
     }
     .link {
@@ -44,6 +49,8 @@ const Wrapper = styled.article`
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 10px;
+        padding-top: 0;
     }
     footer h5,
     footer p {

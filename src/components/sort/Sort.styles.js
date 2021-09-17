@@ -32,8 +32,8 @@ const Wrapper = styled.section`
         column-gap: 0.5rem;
         button {
             background: transparent;
-            border: 1px solid var(--clr-black);
-            color: var(--clr-black);
+            border: 1px solid var(--clr-primary-2);
+            color: var(--clr-primary-2);
             width: 1.5rem;
             border-radius: var(--radius);
             height: 1.5rem;
@@ -46,7 +46,7 @@ const Wrapper = styled.section`
             }
         }
         .active {
-            background: var(--clr-black);
+            background: var(--clr-primary-2);
             color: var(--clr-white);
         }
     }
@@ -56,10 +56,15 @@ const Wrapper = styled.section`
         font-size: 1rem;
         text-transform: capitalize;
         padding: 0.25rem 0.5rem;
+        color: inherit;
     }
     label {
         font-size: 1rem;
         text-transform: capitalize;
+    }
+
+    select{
+        color: inherit;
     }
 `;
 

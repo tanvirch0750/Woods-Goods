@@ -13,6 +13,7 @@ const Wrapper = styled.section`
         border-radius: var(--radius);
         border-color: transparent;
         letter-spacing: var(--spacing);
+        font-family: inherit;
     }
     .search-input::placeholder {
         text-transform: capitalize;
@@ -26,9 +27,10 @@ const Wrapper = styled.section`
         background: transparent;
         border: none;
         border-bottom: 1px solid transparent;
-        letter-spacing: var(--spacing);
-        color: var(--clr-grey-5);
+        color: var(--clr-grey-1);
         cursor: pointer;
+        font-family: inherit;
+        font-weight: 500;
     }
     .active {
         border-color: var(--clr-grey-5);
@@ -38,6 +40,7 @@ const Wrapper = styled.section`
         border-radius: var(--radius);
         border-color: transparent;
         padding: 0.25rem;
+        font-family: inherit;
     }
     .colors {
         display: flex;
@@ -55,6 +58,7 @@ const Wrapper = styled.section`
         opacity: 0.5;
         display: flex;
         align-items: center;
+        font-family: inherit;
         justify-content: center;
         svg {
             font-size: 0.5rem;
@@ -67,6 +71,7 @@ const Wrapper = styled.section`
         justify-content: center;
         margin-right: 0.5rem;
         opacity: 0.5;
+        font-family: inherit;
     }
     .active {
         opacity: 1;
@@ -84,12 +89,14 @@ const Wrapper = styled.section`
         text-transform: capitalize;
         column-gap: 0.5rem;
         font-size: 1rem;
+        font-family: inherit;
     }
     .clear-btn {
         background: var(--clr-red-dark);
         color: var(--clr-white);
         padding: 0.25rem 0.5rem;
         border-radius: var(--radius);
+        font-family: inherit;
     }
     @media (min-width: 768px) {
         .content {

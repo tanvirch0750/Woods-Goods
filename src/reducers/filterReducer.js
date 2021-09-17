@@ -1,5 +1,5 @@
 /* eslint-disable no-unreachable */
-import { LOAD_PRODUCTS, SET_GRIDVIEW, SET_LISTVIEW, SORT_PRODUCTS, UPDATE_SORT } from '../actions';
+import { CLEAR_FILTERS, FILTER_PRODUCTS, LOAD_PRODUCTS, SET_GRIDVIEW, SET_LISTVIEW, SORT_PRODUCTS, UPDATE_FILTERS, UPDATE_SORT } from '../actions';
 // import {LOAD_PRODUCTS, SET_GRIDVIEW, SET_LISTVIEW, UPDATE_SORT, SORT_PRODUCTS, UPDATE_FILTERS, FILTER_PRODUCTS, CLEAR_FILTERS} from '../actions';
 
 const filterReducer = (state, action) => {
@@ -61,6 +61,27 @@ const filterReducer = (state, action) => {
       }
 
       return {...state, filteredProducts: tempProducts}
+   }
+ 
+   if (action.type === UPDATE_FILTERS) {
+      const {name, value} = action.payload;
+      return {...state, filters:{...state.filters, [name]:value}} 
+   }
+
+   if(action.type === FILTER_PRODUCTS) {
+      return {...state}
+   }
+
+   if(action.type === CLEAR_FILTERS) {
+      return {...state, filters: {
+         ...state.filters,
+         text: '',
+         company: 'all',
+         category: 'all',
+         color: 'all',
+         price: state.filters.maxPrice,
+         shipping: false
+      }}
    }
 
   

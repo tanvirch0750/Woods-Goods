@@ -1,5 +1,5 @@
 /* eslint-disable no-unreachable */
-import { LOAD_PRODUCTS, SET_GRIDVIEW, SET_LISTVIEW } from '../actions';
+import { LOAD_PRODUCTS, SET_GRIDVIEW, SET_LISTVIEW, UPDATE_SORT } from '../actions';
 // import {LOAD_PRODUCTS, SET_GRIDVIEW, SET_LISTVIEW, UPDATE_SORT, SORT_PRODUCTS, UPDATE_FILTERS, FILTER_PRODUCTS, CLEAR_FILTERS} from '../actions';
 
 const filterReducer = (state, action) => {
@@ -24,6 +24,13 @@ const filterReducer = (state, action) => {
       return{
          ...state,
          gridView: false,
+      }
+   }
+
+   if(action.type === UPDATE_SORT) {
+      return{
+         ...state,
+         sort: action.payload,
       }
    }
 

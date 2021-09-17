@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-onchange */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import { BsFillGridFill, BsList } from 'react-icons/bs';
@@ -5,7 +6,14 @@ import { useFilterContext } from '../../context/filterContext';
 import Wrapper from './Sort.styles';
 
 function Sort() {
-    const { filteredProducts: products, gridView, setGridView, setListView } = useFilterContext();
+    const {
+        filteredProducts: products,
+        gridView,
+        setGridView,
+        setListView,
+        sort,
+        updateSort,
+    } = useFilterContext();
     return (
         <Wrapper>
             <div className="btn-container">
@@ -28,7 +36,13 @@ function Sort() {
             <hr />
             <form>
                 <label htmlFor="sort">Sort by</label>
-                <select name="sort" id="sort" className="sort-input">
+                <select
+                    name="sort"
+                    id="sort"
+                    className="sort-input"
+                    value={sort}
+                    onChange={updateSort}
+                >
                     <option value="price-lowest">Lowest Price</option>
                     <option value="price-highest">Highest Price</option>
                     <option value="price-a">Name (a-z)</option>

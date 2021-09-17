@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useReducer } from 'react';
-import { LOAD_PRODUCTS, SET_GRIDVIEW, SET_LISTVIEW, UPDATE_SORT } from '../actions';
+import { LOAD_PRODUCTS, SET_GRIDVIEW, SET_LISTVIEW, SORT_PRODUCTS, UPDATE_SORT } from '../actions';
 import reducer from '../reducers/filterReducer';
 // import {LOAD_PRODUCTS, SET_GRIDVIEW, SET_LISTVIEW, UPDATE_SORT, SORT_PRODUCTS, UPDATE_FILTERS, FILTER_PRODUCTS, CLEAR_FILTERS} from '../actions';
 import { useProductsContext } from './productsContext';
@@ -20,6 +20,11 @@ export const FilterProvider = ({children}) => {
    useEffect(() => {
       dispatch({type: LOAD_PRODUCTS, payload: products})
    }, [products])
+
+   useEffect(() => {
+      dispatch({type: SORT_PRODUCTS})
+      
+   }, [products, state.sort]);
 
    const setGridView = () => {
       dispatch({type: SET_GRIDVIEW})

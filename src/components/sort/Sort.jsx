@@ -45,8 +45,8 @@ function Sort() {
                 >
                     <option value="price-lowest">Lowest Price</option>
                     <option value="price-highest">Highest Price</option>
-                    <option value="price-a">Name (a-z)</option>
-                    <option value="price-z">Name (z-a)</option>
+                    <option value="name-a">Name (a-z)</option>
+                    <option value="name-z">Name (z-a)</option>
                 </select>
             </form>
         </Wrapper>

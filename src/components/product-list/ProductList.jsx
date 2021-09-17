@@ -7,7 +7,11 @@ function ProductList() {
     const { filteredProducts: products, gridView } = useFilterContext();
 
     if (products.length < 1) {
-        return <h5 style={{ textTransform: 'none' }}>Sorry, no products matched your search.</h5>;
+        return (
+            <h5 style={{ textTransform: 'none' }}>
+                Please wait for few seconds Or Sorry no products matched your search.
+            </h5>
+        );
     }
 
     if (gridView === false) {

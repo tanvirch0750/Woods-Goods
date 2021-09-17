@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useReducer } from 'react';
-import { LOAD_PRODUCTS } from '../actions';
+import { LOAD_PRODUCTS, SET_GRIDVIEW, SET_LISTVIEW } from '../actions';
 import reducer from '../reducers/filterReducer';
 // import {LOAD_PRODUCTS, SET_GRIDVIEW, SET_LISTVIEW, UPDATE_SORT, SORT_PRODUCTS, UPDATE_FILTERS, FILTER_PRODUCTS, CLEAR_FILTERS} from '../actions';
 import { useProductsContext } from './productsContext';
@@ -20,8 +20,16 @@ export const FilterProvider = ({children}) => {
       dispatch({type: LOAD_PRODUCTS, payload: products})
    }, [products])
 
+   const setGridView = () => {
+      dispatch({type: SET_GRIDVIEW})
+   }
+
+   const setListView = () => {
+      dispatch({type: SET_LISTVIEW})
+   }
+
    return (
-      <FilterContext.Provider value={ {...state} }>
+      <FilterContext.Provider value={ {...state, setGridView, setListView} }>
          {children}
       </FilterContext.Provider>
    )

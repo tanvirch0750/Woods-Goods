@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import { CartProvider } from './context/cartContext';
 import { FilterProvider } from './context/filterContext';
 import { GlobalProvider } from './context/globalContext';
 import { ProductsProvider } from './context/productsContext';
@@ -11,7 +12,9 @@ ReactDOM.render(
         <GlobalProvider>
             <ProductsProvider>
                <FilterProvider>
-                  <App />
+                  <CartProvider>
+                    <App />
+                  </CartProvider>
                </FilterProvider>
            </ProductsProvider>
         </GlobalProvider>

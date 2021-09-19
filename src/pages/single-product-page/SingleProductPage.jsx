@@ -26,7 +26,6 @@ function SingleProductPage() {
         fetchSingleProduct(`${url}${id}`);
     },[id])
 
-    console.log(product);
     useEffect(() => {
         if (error) {
             setTimeout(() => {

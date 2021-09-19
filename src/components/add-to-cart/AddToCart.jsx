@@ -4,11 +4,14 @@
 import React, { useState } from 'react';
 import { FaCheck } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { useCartContext } from '../../context/cartContext';
 import AmountButton from '../amount-btn/AmountButton';
 import Wrapper from './AddToCart.styles';
 
 function AddToCart({ product }) {
-    const { stock, colors } = product;
+    const { addToCart } = useCartContext();
+
+    const { id, stock, colors } = product;
 
     const [mainColor, setMainColor] = useState(colors[0]);
     const [amount, setAmount] = useState(1);
@@ -52,7 +55,11 @@ function AddToCart({ product }) {
             </div>
             <div className="btn-container">
                 <AmountButton amount={amount} increase={increase} decrease={decrease} />
-                <Link to="/cart" className="btn">
+                <Link
+                    to="/cart"
+                    className="btn"
+                    onClick={() => addToCart(id, mainColor, amount, product)}
+                >
                     Add to cart
                 </Link>
             </div>

@@ -1,11 +1,20 @@
 /* eslint-disable no-unused-vars */
-import React, { useContext, useReducer } from 'react';
+import React, { useContext, useEffect, useReducer } from 'react';
 // import {ADD_TO_CART, REMOVE_CART_ITEM, TOGGLE_CART_ITEM_AMOUNT, CLEAR_CART, COUNT_CART_TOTALS} from '../actions';
 import { ADD_TO_CART } from '../actions';
 import reducer from '../reducers/cart-reducer';
 
+const getLocalStorage = () => {
+   const cart = localStorage.getItem('cart');
+   if (cart) {
+      return JSON.parse(localStorage.getItem('cart'));
+   } 
+      return []
+}
+
 const initialState = {
-   cart: [],
+   // cart: [],
+   cart: getLocalStorage(),
    totalItems: 0,
    totalAmount: 0,
    shippingFee: 534,
@@ -22,8 +31,22 @@ export const CartProvider = ({children}) => {
       dispatch({ type: ADD_TO_CART, payload: {id, color, amount, product} }) 
    }
 
+   // remove cart
+   const removeCart = (id) => {}
+
+   // toggle amount
+   const toggleAmount = (id, value) => {}
+
+   // clear cart
+   const clearCart = () => {}
+
+   // localstorage for persistant cart
+   useEffect(() => {
+      localStorage.setItem('cart', JSON.stringify(state.cart))
+   }, [state.cart])
+
    return (
-      <CartContext.Provider value={{...state, addToCart}}>
+      <CartContext.Provider value={{...state, addToCart, removeCart, toggleAmount, clearCart}}>
          {children}
       </CartContext.Provider>
    )

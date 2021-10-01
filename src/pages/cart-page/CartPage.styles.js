@@ -8,5 +8,8 @@ const Wrapper = styled.main`
             text-transform: none;
         }
     }
+    .cart-page-btn{
+        margin-top: 20px;
+    }
 `;
 export default Wrapper;

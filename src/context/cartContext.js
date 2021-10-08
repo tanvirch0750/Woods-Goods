@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext, useEffect, useReducer } from 'react';
 // import {ADD_TO_CART, REMOVE_CART_ITEM, TOGGLE_CART_ITEM_AMOUNT, CLEAR_CART, COUNT_CART_TOTALS} from '../actions';
-import { ADD_TO_CART, CLEAR_CART, REMOVE_CART_ITEM } from '../actions';
+import { ADD_TO_CART, CLEAR_CART, REMOVE_CART_ITEM, TOGGLE_CART_ITEM_AMOUNT } from '../actions';
 import reducer from '../reducers/cart-reducer';
 
 const getLocalStorage = () => {
@@ -37,7 +37,9 @@ export const CartProvider = ({children}) => {
    }
 
    // toggle amount
-   const toggleAmount = (id, value) => {}
+   const toggleAmount = (id, value) => {
+      dispatch({type: TOGGLE_CART_ITEM_AMOUNT, payload: {id, value}})
+   }
 
    // clear cart
    const clearCart = () => {

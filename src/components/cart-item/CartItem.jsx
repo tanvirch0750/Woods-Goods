@@ -6,12 +6,15 @@ import AmountButton from '../amount-btn/AmountButton';
 import Wrapper from './CartItem.styles';
 
 function CartItem({ id, image, name, color, price, amount }) {
-    const { removeCartItem } = useCartContext();
-    // const {removeCartItem, toggleAmount} = useCartContext();
+    const { removeCartItem, toggleAmount } = useCartContext();
 
-    const increase = () => {};
+    const increase = () => {
+        toggleAmount(id, 'inc');
+    };
 
-    const decrease = () => {};
+    const decrease = () => {
+        toggleAmount(id, 'dec');
+    };
 
     return (
         <Wrapper>

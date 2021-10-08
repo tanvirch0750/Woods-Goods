@@ -28,6 +28,7 @@ const Wrapper = styled.article`
         display: block;
         border-radius: var(--radius);
         object-fit: cover;
+        overflow: hidden;
     }
     h5 {
         font-size: 0.75rem;
@@ -35,7 +36,7 @@ const Wrapper = styled.article`
     }
 
     .color {
-        color: var(--clr-grey-5);
+        color: var(--clr-grey-3);
         font-size: 0.75rem;
         letter-spacing: var(--spacing);
         text-transform: capitalize;
@@ -81,11 +82,12 @@ const Wrapper = styled.article`
         font-size: 0.75rem;
         cursor: pointer;
     }
+    
     @media (min-width: 776px) {
         .subtotal {
             display: block;
             margin-bottom: 0;
-            color: var(--clr-grey-5);
+            color: var(--clr-grey-2);
             font-weight: 400;
             font-size: 1rem;
         }

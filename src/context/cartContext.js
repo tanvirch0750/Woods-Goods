@@ -32,7 +32,7 @@ export const CartProvider = ({children}) => {
    }
 
    // remove cart
-   const removeCart = (id) => {}
+   const removeCartItem = (id) => {}
 
    // toggle amount
    const toggleAmount = (id, value) => {}
@@ -46,7 +46,7 @@ export const CartProvider = ({children}) => {
    }, [state.cart])
 
    return (
-      <CartContext.Provider value={{...state, addToCart, removeCart, toggleAmount, clearCart}}>
+      <CartContext.Provider value={{...state, addToCart, removeCartItem, toggleAmount, clearCart}}>
          {children}
       </CartContext.Provider>
    )

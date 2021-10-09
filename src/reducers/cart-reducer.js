@@ -1,4 +1,5 @@
-import { ADD_TO_CART, CLEAR_CART, REMOVE_CART_ITEM, TOGGLE_CART_ITEM_AMOUNT } from '../actions';
+/* eslint-disable no-param-reassign */
+import { ADD_TO_CART, CLEAR_CART, COUNT_CART_TOTALS, REMOVE_CART_ITEM, TOGGLE_CART_ITEM_AMOUNT } from '../actions';
 // import {ADD_TO_CART, REMOVE_CART_ITEM, TOGGLE_CART_ITEM_AMOUNT, CLEAR_CART, COUNT_CART_TOTALS} from '../actions';
 
 const cartReducer = (state, action) => {
@@ -72,8 +73,23 @@ const cartReducer = (state, action) => {
       });
 
       return {...state, cart: tempCart}
+   }
 
+   if(action.type === COUNT_CART_TOTALS) {
+      const {totalItems, totalAmount} = state.cart.reduce((total, cartItem) => {
 
+         const {amount, price} = cartItem;
+
+         total.totalItems += amount;
+         total.totalAmount += price * amount;
+
+         return total;
+      },{
+         totalItems: 0,
+         totalAmount: 0,
+      })
+
+      return {...state, totalItems, totalAmount}
    }
 
    throw new Error(`No Matching "${action.type}" - action type`)

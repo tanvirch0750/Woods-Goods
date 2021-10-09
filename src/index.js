@@ -1,3 +1,4 @@
+import { Auth0Provider } from '@auth0/auth0-react';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
@@ -5,10 +6,13 @@ import { CartProvider } from './context/cartContext';
 import { FilterProvider } from './context/filterContext';
 import { GlobalProvider } from './context/globalContext';
 import { ProductsProvider } from './context/productsContext';
+import { UserProvider } from './context/userContext';
 import './index.css';
 
 ReactDOM.render(
     <React.StrictMode>
+        <Auth0Provider domain="dev-stcujzhc.us.auth0.com" clientId="QDWm6YLpgXsoMXyQupUxtVF4SHHzw42z" redirectUri={window.location.origin} cacheLocation="localstorage">
+        <UserProvider>
         <GlobalProvider>
             <ProductsProvider>
                <FilterProvider>
@@ -18,6 +22,8 @@ ReactDOM.render(
                </FilterProvider>
            </ProductsProvider>
         </GlobalProvider>
+        </UserProvider>
+        </Auth0Provider>
     </React.StrictMode>,
     document.getElementById('root')
 );

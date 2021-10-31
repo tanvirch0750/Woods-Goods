@@ -1,9 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useProductsContext } from '../../context/productsContext';
 import Error from '../error/Error';
 import Loading from '../loading/Loading';
 import Product from '../product/Product';
-// import {Link} from 'react-router-dom';
 import Wrapper from './FeaturedProduct.styles';
 
 function FeaturedProduct() {
@@ -30,6 +30,9 @@ function FeaturedProduct() {
                     <Product key={product.id} {...product} />
                 ))}
             </div>
+            <Link to="/products" className="btn">
+                All Products
+            </Link>
         </Wrapper>
     );
 }

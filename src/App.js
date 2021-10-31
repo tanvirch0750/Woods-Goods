@@ -2,8 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Footer, MobileNavbar, Navbar } from './components';
 import {
-    AboutPage,
-    CartPage,
+    AboutPage, AuthWrapper, CartPage,
     CheckoutPage,
     ErrorPage,
     HomePage, PrivateRoute, ProductPage,
@@ -12,7 +11,8 @@ import {
 
 function App() {
     return (
-        <Router>
+        <AuthWrapper>
+            <Router>
             <Navbar />
             <MobileNavbar />
             <Switch>
@@ -38,6 +38,8 @@ function App() {
             </Switch>
             <Footer />
         </Router>
+        </AuthWrapper>
+        
     );
 }
 

@@ -11,18 +11,22 @@ import './index.css';
 
 ReactDOM.render(
     <React.StrictMode>
-        <Auth0Provider domain="dev-stcujzhc.us.auth0.com" clientId="QDWm6YLpgXsoMXyQupUxtVF4SHHzw42z" redirectUri={window.location.origin} cacheLocation="localstorage">
-        <UserProvider>
-        <GlobalProvider>
-            <ProductsProvider>
-               <FilterProvider>
+        <Auth0Provider 
+          domain={process.env.REACT_APP_AUTH_DOMAIN} 
+          clientId={process.env.REACT_APP_AUTH_CLIENT_ID} 
+          redirectUri={window.location.origin} 
+          cacheLocation="localstorage">
+          <UserProvider>
+            <GlobalProvider>
+              <ProductsProvider>
+                <FilterProvider>
                   <CartProvider>
                     <App />
                   </CartProvider>
-               </FilterProvider>
-           </ProductsProvider>
-        </GlobalProvider>
-        </UserProvider>
+                </FilterProvider>
+              </ProductsProvider>
+           </GlobalProvider>
+         </UserProvider>
         </Auth0Provider>
     </React.StrictMode>,
     document.getElementById('root')

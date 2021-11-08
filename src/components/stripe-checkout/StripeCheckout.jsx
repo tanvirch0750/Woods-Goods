@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
-import { Elements, useElements, useStripe } from '@stripe/react-stripe-js';
+import { CardElement, Elements, useElements, useStripe } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 // import { formatPrice } from '../../utils/helpers'
 import { useHistory } from 'react-router-dom';
 // import {
@@ -49,7 +49,55 @@ const CheckoutForm = () => {
         },
     };
 
-    return <h2>Hello stripe checkout World</h2>;
+    const createPaymentIntent = async () => {
+        console.log('Hello from stripe checkout');
+        // try {
+        //   const { data } = await axios.post(
+        //     '/.netlify/functions/create-payment-intent',
+        //     JSON.stringify({ cart, shipping_fee, total_amount })
+        //   )
+
+        //   setClientSecret(data.clientSecret)
+        // } catch (error) {
+        //   // console.log(error.response)
+        // }
+    };
+
+    useEffect(() => {
+        createPaymentIntent();
+    }, []);
+
+    const handleChange = async (event) => {
+        // setDisabled(event.empty)
+        // setError(event.error ? event.error.message : '')
+    };
+
+    const handleSubmit = async (ev) => {};
+
+    return (
+        <div>
+            <form id="payment-form" onSubmit={handleSubmit}>
+                <CardElement id="card-element" options={cardStyle} onChange={handleChange} />
+                <button type="button" disabled={processing || disabled || succeeded} id="submit">
+                    <span id="button-text">
+                        {processing ? <div className="spinner" id="spinnier" /> : 'Pay'}
+                    </span>
+                </button>
+                {/* Show any error that happens when processing the payment */}
+                {error && (
+                    <div className="card-error" role="alert">
+                        {error}
+                    </div>
+                )}
+                {/* Show  a success message upon completion */}
+                <p className={succeeded ? 'result-message' : 'result-message hidden'}>
+                    Payment succedded, see the result in your
+                    <a href="https://dashboard.stripe.com/test/payments">Stripe dasboard.</a>
+                    Refresh the page to pay again
+                </p>
+            </form>
+        </div>
+    );
 };
 
 function StripeCheckout() {

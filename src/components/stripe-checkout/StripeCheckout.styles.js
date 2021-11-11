@@ -25,7 +25,7 @@ const Wrapper = styled.section`
         font-size: 16px;
     }
     .result-message a {
-        color: rgb(89, 111, 214);
+        color: #2f9e44;
         font-weight: 600;
         text-decoration: none;
     }
@@ -53,7 +53,7 @@ const Wrapper = styled.section`
     }
     /* Buttons and links */
     button {
-        background: #5469d4;
+        background: #2f9e44;
         font-family: Arial, sans-serif;
         color: #ffffff;
         border-radius: 0 0 4px 4px;
@@ -101,7 +101,7 @@ const Wrapper = styled.section`
     .spinner:before {
         width: 10.4px;
         height: 20.4px;
-        background: #5469d4;
+        background: #2f9e44;
         border-radius: 20.4px 0 0 20.4px;
         top: -0.2px;
         left: -0.2px;
@@ -113,7 +113,7 @@ const Wrapper = styled.section`
     .spinner:after {
         width: 10.4px;
         height: 10.2px;
-        background: #5469d4;
+        background: #2f9e44;
         border-radius: 0 10.2px 10.2px 0;
         top: -0.1px;
         left: 10.2px;

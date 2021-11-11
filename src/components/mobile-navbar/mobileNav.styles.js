@@ -23,7 +23,7 @@ const MobileNavContainer = styled.div`
     }
     .logo {
             width: 250px;
-            margin-left: -15px;
+            /* margin-left: 15px;  */
             font-family: 'Nunito', sans-serif;
             color: var(--clr-primary-1);
             font-size: 30px;
